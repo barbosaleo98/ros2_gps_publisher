@@ -52,8 +52,8 @@ class GPSPublisher(Node):
                             lon_decimal = self.convert_to_degrees(longitude, lon_direction)
 
                             # Convert to microdegrees (optional, if needed)
-                            lat_micro = lat_decimal * 1_000_000
-                            lon_micro = lon_decimal * 1_000_000
+                            lat_micro = lat_decimal #* 1_000_000
+                            lon_micro = lon_decimal #* 1_000_000
 
                             # Create a Point message for latitude and longitude
                             gps_coordinates = Point()
@@ -90,8 +90,8 @@ class GPSPublisher(Node):
                                     self.get_logger().info(f"Published: Latitude (microdegrees): {lat_decimal}, Longitude (microdegrees): {lon_decimal}")
 
                                     # Convert to microdegrees (optional, if needed)
-                                    lat_micro = lat_decimal * 1_000_000
-                                    lon_micro = lon_decimal * 1_000_000
+                                    lat_micro = lat_decimal #* 1_000_000
+                                    lon_micro = lon_decimal #* 1_000_000
 
                                     # Create a Point message for latitude and longitude
                                     gps_coordinates = Point()
